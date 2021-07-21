@@ -10,11 +10,10 @@ app.secret_key = "secret-key"
 
 
 @app.route('/')
-def homepage():
-
+def show_homepage():
     return render_template('homepage.html')
 
 
 if __name__ == "__main__":
-    connect_to_db(app)
+    # connect_to_db(app)
     app.run(use_reloader=True, use_debugger=True)
